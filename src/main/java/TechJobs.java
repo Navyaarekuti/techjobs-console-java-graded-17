@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
@@ -117,25 +118,56 @@ public class TechJobs {
         return choiceKeys[choiceIdx];
     }
 
-    // Print a list of jobs
+//    private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
+//        if (someJobs.isEmpty()) {
+//            System.out.println("No Results");
+//        } else {
+//            boolean firstJob = true;
+//            for (HashMap<String, String> job : someJobs) {
+//                if (!firstJob) {
+//                    System.out.println("\n\nSearch term:");
+//                }
+//                System.out.println("*****"); // Enter a newline between job entries
+//                for (Map.Entry<String, String> entry : job.entrySet()) {
+//                    String column = entry.getKey();
+//                    String value = entry.getValue();
+//                    System.out.println(column + ": " + value);
+//                }
+//                System.out.println("*****");
+//                firstJob = false;
+//            }
+//        }
+//    }
+//
+//}
+
+     //Print a list of jobs
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
         if (someJobs.isEmpty()) {
-            System.out.println("No Results");
+            System.out.print("No Results");
         } else {
             boolean firstJob = true;
             for (HashMap<String, String> job : someJobs) {
                 if (!firstJob) {
-                    System.out.println(); // Enter a newline between job entries
+                    System.out.println("\n\nSearch term:");
                 }
-                System.out.println("*****");
+                System.out.print("\n");
+                System.out.println("*****");//Enter a newline between job entries
+
                 for (Map.Entry<String, String> entry : job.entrySet()) {
                     String column = entry.getKey();
                     String value = entry.getValue();
                     System.out.println(column + ": " + value);
+
                 }
-                System.out.println("*****");
+                System.out.print("*****");
+                System.out.print("\n");
+                }
+
+
+
                 firstJob = false;
-            }
+
 
             //System.out.println("printJobs is not implemented yet");
         }
