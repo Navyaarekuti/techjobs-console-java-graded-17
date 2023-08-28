@@ -127,13 +127,13 @@ public class TechJobs {
                 if (!firstJob) {
                     System.out.println(); // Enter a newline between job entries
                 }
-                System.out.println("*****");
+                System.out.print("*****");
                 for (Map.Entry<String, String> entry : job.entrySet()) {
                     String column = entry.getKey();
                     String value = entry.getValue();
                     System.out.println(column + ": " + value);
                 }
-                System.out.println("*****");
+                System.out.print("*****");
                 firstJob = false;
             }
 

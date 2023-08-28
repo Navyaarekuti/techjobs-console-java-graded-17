@@ -75,10 +75,11 @@ public class JobData {
 
             String aValue = row.get(column);
 
-            if (aValue.contains(value)) {
+            if (aValue.toLowerCase().contains(value.toLowerCase())) {
                 jobs.add(row);
             }
-        }
+            }
+
         jobs.sort((job1, job2) -> {
             String value1 = job1.get(column);
             String value2 = job2.get(column);
