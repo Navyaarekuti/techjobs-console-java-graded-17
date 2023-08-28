@@ -118,7 +118,10 @@ public class JobData {
                 String columnValue = row.get(column);
                 if (columnValue.toLowerCase().contains(value.toLowerCase()) && !jobs.contains(row)) {
                     jobs.add(row);
-                    break;
+//            for (String fields : row.values()) {
+//                if (fields.toLowerCase().contains(searchTerm)){
+//                    jobs.add(row);
+                   break;
                 }
             }
         }
