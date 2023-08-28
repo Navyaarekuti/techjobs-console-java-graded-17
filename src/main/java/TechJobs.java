@@ -118,28 +118,7 @@ public class TechJobs {
         return choiceKeys[choiceIdx];
     }
 
-//    private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
-//        if (someJobs.isEmpty()) {
-//            System.out.println("No Results");
-//        } else {
-//            boolean firstJob = true;
-//            for (HashMap<String, String> job : someJobs) {
-//                if (!firstJob) {
-//                    System.out.println("\n\nSearch term:");
-//                }
-//                System.out.println("*****"); // Enter a newline between job entries
-//                for (Map.Entry<String, String> entry : job.entrySet()) {
-//                    String column = entry.getKey();
-//                    String value = entry.getValue();
-//                    System.out.println(column + ": " + value);
-//                }
-//                System.out.println("*****");
-//                firstJob = false;
-//            }
-//        }
-//    }
-//
-//}
+
 
      //Print a list of jobs
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
