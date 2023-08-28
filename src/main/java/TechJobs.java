@@ -128,7 +128,7 @@ public class TechJobs {
             boolean firstJob = true;
             for (HashMap<String, String> job : someJobs) {
                 if (!firstJob) {
-                    System.out.println("\n\nSearch term:");
+                    System.out.println("Search term:");
                 }
                 System.out.print("\n");
                 System.out.println("*****");//Enter a newline between job entries
