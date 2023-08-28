@@ -79,7 +79,23 @@ public class JobData {
                 jobs.add(row);
             }
         }
-
+        jobs.sort((job1, job2) -> {
+            String value1 = job1.get(column);
+            String value2 = job2.get(column);
+            if (value1 == null && value2 == null)
+            {
+                return 0;
+            }
+            if (value1 == null)
+            {
+                return -1;
+            }
+            if (value2 == null)
+            {
+                return 1;
+            }
+            return value1.compareToIgnoreCase(value2);
+        });
         return jobs;
     }
 
@@ -95,7 +111,21 @@ public class JobData {
         loadData();
 
         // TODO - implement this method
-        return null;
+        ArrayList<HashMap<String, String>> jobs = new ArrayList<>();
+
+        for (HashMap<String, String> row : allJobs) {
+            for (String column : row.keySet()) {
+                String columnValue = row.get(column);
+                if (columnValue.toLowerCase().contains(value.toLowerCase()) && !jobs.contains(row)) {
+                    jobs.add(row);
+                    break;
+                }
+            }
+        }
+
+        return jobs;
+
+       // return null;
     }
 
     /**
